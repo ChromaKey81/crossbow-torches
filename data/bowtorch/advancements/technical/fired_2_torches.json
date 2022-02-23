@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "fired_nightmare_rocket": {
+            "trigger": "minecraft:shot_crossbow",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "offhand": {
+                                    "items": [
+                                        "minecraft:torch"
+                                    ],
+                                    "count": {
+                                        "min": 2
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "item": {
+                    "nbt": "{ChargedProjectiles:[{id:\"minecraft:arrow\"},{id:\"minecraft:arrow\"},{id:\"minecraft:arrow\"}]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bowtorch:firing/launched"
+    }
+}
