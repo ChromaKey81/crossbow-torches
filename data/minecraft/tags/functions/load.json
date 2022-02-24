@@ -1,6 +1,6 @@
 {
     "replace": false,
     "values": [
-        "bowtorch:tick"
+        "bowtorch:load"
     ]
 }

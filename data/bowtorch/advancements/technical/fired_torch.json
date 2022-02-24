@@ -28,6 +28,6 @@
         }
     },
     "rewards": {
-        "function": "bowtorch:firing/launched_single"
+        "function": "bowtorch:firing/launched"
     }
 }
