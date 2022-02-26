@@ -22,12 +22,16 @@
                     }
                 ],
                 "item": {
-                    "nbt": "{ChargedProjectiles:[{id:\"minecraft:arrow\"},{id:\"minecraft:arrow\"},{id:\"minecraft:arrow\"}]}"
-                }
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:multishot"
+                      }
+                    ]
+                  }
             }
         }
     },
     "rewards": {
-        "function": "bowtorch:firing/launched"
+        "function": "bowtorch:firing/multishot"
     }
 }
