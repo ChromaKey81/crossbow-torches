@@ -2,10 +2,7 @@
 # Places the torch on contact with a block.
 # @context torch arrow
 
-execute unless block ~ ~ ~1 #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=north] replace
-execute unless block ~ ~ ~-1 #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=south] replace
-execute unless block ~1 ~ ~ #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=west] replace
-execute unless block ~-1 ~ ~ #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=east] replace
-execute unless block ~ ~-1 ~ #bowtorch:air run setblock ~ ~ ~ torch replace
-execute unless block ~ ~-1 ~ #bowtorch:air unless block ~-1 ~ ~ #bowtorch:air unless block ~1 ~ ~ #bowtorch:air unless block ~ ~ ~-1 #bowtorch:air unless block ~ ~ ~1 #bowtorch:air run summon item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
+execute if score @s bowtorch.type matches 1 run function bowtorch:torch_arrow/place/torch
+execute if score @s bowtorch.type matches 2 run function bowtorch:torch_arrow/place/soul_torch
+execute if score @s bowtorch.type matches 3 run function bowtorch:torch_arrow/place/redstone_torch
 tag @s remove bowtorch.has_torch

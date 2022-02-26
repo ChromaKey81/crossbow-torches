@@ -11,7 +11,9 @@
                             "equipment": {
                                 "offhand": {
                                     "items": [
-                                        "minecraft:torch"
+                                        "minecraft:torch",
+                                        "minecraft:soul_torch",
+                                        "minecraft:redstone_torch"
                                     ],
                                     "count": {
                                         "min": 1

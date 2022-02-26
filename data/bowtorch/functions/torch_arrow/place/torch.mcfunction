@@ -1,0 +1,6 @@
+execute store success score @s bowtorch.dummy if block ~ ~ ~ #bowtorch:air unless block ~ ~ ~1 #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=north] replace
+execute unless score @s bowtorch.dummy matches 1 store success score @s bowtorch.dummy if block ~ ~ ~ #bowtorch:air unless block ~ ~ ~-1 #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=south] replace
+execute unless score @s bowtorch.dummy matches 1 store success score @s bowtorch.dummy if block ~ ~ ~ #bowtorch:air unless block ~1 ~ ~ #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=west] replace
+execute unless score @s bowtorch.dummy matches 1 store success score @s bowtorch.dummy if block ~ ~ ~ #bowtorch:air unless block ~-1 ~ ~ #bowtorch:air run setblock ~ ~ ~ wall_torch[facing=east] replace
+execute unless score @s bowtorch.dummy matches 1 store success score @s bowtorch.dummy if block ~ ~ ~ #bowtorch:air unless block ~ ~-1 ~ #bowtorch:air run setblock ~ ~ ~ torch replace
+execute at @s unless score @s bowtorch.dummy matches 1 run summon item ~ ~-1 ~ {Item:{id:"minecraft:torch",Count:1b}}
